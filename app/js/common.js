@@ -1,6 +1,5 @@
 $( document ).ready(function() {
     preloader();//Fade preloader when page loaded
-
 });
 
 
@@ -11,3 +10,4 @@ function preloader () {
         $('.loader-outer').fadeOut();
     });
 }
+

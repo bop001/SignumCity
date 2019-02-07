@@ -1,15 +1,31 @@
 .container
-  width: 100%
+  max-width: 1100px
   display: flex
-  justify-content: center
-  padding: 28px 0
+  flex-wrap: wrap
+  margin: 0 auto
+
+  @include media(1100)
+    padding: 0 17px
+
+  @include media(768)
+    padding: 0 17px
 
 .header
   max-width: 1440px
   margin: 0 auto
+  min-height: 743px
   background: url(../img/Background-header.png) no-repeat
   background-size: cover
-  min-height: 743px
+
+  @include media(768)
+    background: url(../img/Background-header-mob.png) no-repeat
+    background-size: cover
+
+  &__wrapper
+    display: flex
+    width: 100%
+    justify-content: space-between
+    margin-top: 28px
 
   &__ul
     display: flex
@@ -25,7 +41,129 @@
     color: #fff
 
 .socials
-  margin-left: 160px
 
   &__link
     margin: 0 10px
+.mob__nav
+  display: none
+  //
+  //@include media(768)
+  //  display: block
+
+.people
+  display: flex
+  justify-content: space-between
+
+
+  @include media(1024)
+    margin: 0 auto
+
+  &__title-outer
+    display: flex
+    flex-direction: column
+    max-width: 621px
+    margin-top: 80px
+
+    @include media(1024)
+      margin-top: 46px
+
+  &__h1
+    font-family: Circe
+    font-size: 55px
+    line-height: 73px
+    color: #fff
+    max-width: 621px
+
+    @include media(768)
+      font-size: 35px
+      line-height: normal
+
+  &__h2
+    color: #FFF5BB
+    font-family: 'Open Sans', sans-serif
+    font-size: 23px
+    line-height: 34px
+    margin-top: 32px
+    max-width: 563px
+
+    @include media(768)
+      margin-top: 17px
+      font-size: 16px
+      line-height: 24px
+
+  &__h3
+    font-family: Open Sans
+    font-weight: 300
+    line-height: 27px
+    font-size: 18px
+    color: #fff
+    max-width: 540px
+    margin-top: 11px
+
+    @include media(768)
+      font-size: 16px
+      font-weight: 300
+      line-height: 24px
+
+  &__text
+    font-family: 'Open Sans', sans-serif
+    font-size: 16px
+    color: #fff
+    max-width: 524px
+    margin-top: 7px
+
+  &__img
+    margin-top: 70px
+    margin-left: 209px
+
+    @include media(1024)
+      display: none
+
+
+.form
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  width: 100%
+  max-width: 540px
+  margin-top: 34px
+  position: relative
+
+  @include media(768)
+    margin-top: 24px
+    flex-direction: column
+
+  &__input
+    min-width: 414px
+    background: #fff
+    border-radius: 60px
+    font-family: 'Open Sans', sans-serif
+    padding: 12px 16px
+    font-weight: normal
+    font-size: 18px
+    color: #175E65
+
+    @include media(768)
+      width: 100%
+
+  &__btn
+    max-width: 240px
+    background: linear-gradient(90deg, #F86544 0%, #D83B17 100%)
+    border-radius: 60px
+    color: #fff
+    font-size: 18px
+    font-family: 'Open Sans', sans-serif
+    font-weight: bold
+    text-transform: uppercase
+    display: flex
+    width: 100%
+    justify-content: center
+    padding: 13px 0
+    position: absolute
+    left: 53%
+
+    @include media(768)
+      max-width: 100%
+      position: relative
+      left: 0
+      margin-top: 10px
