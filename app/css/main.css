@@ -3,7 +3,9 @@ body {
   font-weight: normal;
   font-size: 16px;
   letter-spacing: -0.2px;
-  color: #000000; }
+  color: #000000;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Circe'; }
   body * {
     margin: 0;
     padding: 0;
@@ -103,6 +105,44 @@ select, input, textarea {
   display: -ms-flexbox;
   display: flex;
   margin: 0 -15px; }
+
+.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 28px 0; }
+
+.header {
+  max-width: 1440px;
+  margin: 0 auto;
+  background: url(../img/Background-header.png) no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  min-height: 743px; }
+  .header__ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 81px; }
+  .header__li {
+    margin-right: 43px; }
+  .header__link {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff; }
+
+.socials {
+  margin-left: 160px; }
+  .socials__link {
+    margin: 0 10px; }
 
 html, body {
   width: 100%;
