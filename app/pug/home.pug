@@ -1,19 +1,48 @@
 extends blocks/_layout
 
 append content
+    -
+        var links = [
+        {
+            img: 'img/svg/Hamilton.svg',
+            name: 'Alexander Hamilton',
+            text: 'Signum City was easy to play, easy to sign up, and they aren\'t trying to sell me anything, -ever. It is the funnest way to get money for college'
+        },
+        {
+            img: 'img/svg/Buddha.svg',
+            name: 'Buddha',
+            text: 'Getting scholarship money doesn\'t have to be suffering, Signum City makes it fun to win scholarships with your friends.'
+        },
+        {
+            img: 'img/svg/Polo.svg',
+            name: 'Marco Polo',
+            text: 'No need to travel and beg for college money, just sign up for Signum City and start playing now!'
+        },
+        {
+            img: 'img/svg/Peter.svg',
+            name: 'Saint Peter',
+            text: 'For the love of all things holy, Signum City is making it actually exciting and fun to win scholarship money for college.'
+        },
+        {
+            img: 'img/svg/Peter2.svg',
+            name: 'Saint Peter',
+            text: 'For the love of all things holy, Signum City is making it actually exciting and fun to win scholarship money for college.'
+        }
+        ]
+
     section.about
         .container
             .about__wrapper
                 .about__img
                     img(src="img/svg/People-with-light.svg")
                 .about__outer
-                    .about__title ABOUT US
+                    .about__title About us
                     p.about__text We're a bunch of fintech coders who think you should be able to play with fake money to win real money for college. And we figured out how to do that with sponsored contests.
                     p.about__text We aim to create the largest ongoing scholarship giveaway in history.
     section.easy-money
         .container
             .easy-money__wrapper
-                h1.easy-money__title EASY Money
+                h1.easy-money__title Easy Money
                 .easy-money__item-outer
                     .easy-money__item
                         img(src='img/svg/Sing-up.svg')
@@ -36,4 +65,32 @@ append content
                         button.easy__form-btn(type='submit')
                             | JOIN the Wait List
                         p.easy__form-text Hmm, still considering joining? We promise that we don’t bite, and we’ve had all our shots.
+    section.testimonials
+        .container
+            .testimonials__wrapper
+                h1.testimonials__h1 Testimonials
+                .testimonials__title Don't believe us? Well listen to our beta testers:
+                .testimonials__items
+                    each item in links
+                        .testimonials__items-outer
+                            .testimonials__item
+                                .testimonials__item-img
+                                    img(src=item.img)
+                                .testimonials__item-texts
+                                    .testimonials__item-title=item.name
+                                    .testimonials__item-text=item.text
+                .testimonials__text Of course, none of these people actually said any of this, but we think they would. Signum City is all this, and more.
+    section.laptop
+        .container
+            .laptop__wrapper
+                .laptop__texts
+                    .laptop__texts-text Please don’t make us beg, although
+                        br
+                        | we’re not beneath that.
+                    .laptop__texts-text You know you want those $10,000 virtual dollars.
+                    form.laptop__form
+                        input.laptop__form-input(type='email' placeholder='Email')
+                        button.laptop__form-btn(type='submit')
+                            | JOIN the Wait List
+
 

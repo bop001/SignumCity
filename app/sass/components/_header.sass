@@ -5,7 +5,7 @@
   margin: 0 auto
 
   @include media(1100)
-    padding: 0 17px
+    padding: 0 19px
 
   @include media(768)
     padding: 0 17px
@@ -17,15 +17,75 @@
   background: url(../img/Background-header.png) no-repeat
   background-size: cover
 
-  @include media(768)
+  @include media(375)
     background: url(../img/Background-header-mob.png) no-repeat
-    background-size: cover
+
+  &__menu
+    display: none
+
+    @include media(1024)
+      display: block
 
   &__wrapper
     display: flex
     width: 100%
     justify-content: space-between
     margin-top: 28px
+
+    @include media(1024)
+      margin-top: 13px
+
+  &__wrapper-mob
+    position: absolute
+    top: 0
+    left: 0
+    max-height: 710px
+    height: 100vh
+    width: 100%
+    display: none
+    background: url(../img/Background-header.png) no-repeat
+
+
+    @include media(375)
+      background: url(../img/Background-header-mob.png) no-repeat
+
+  &__mob
+    width: 100%
+    padding: 13px 19px
+    display: -webkit-box
+    display: -webkit-flex
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -webkit-flex-direction: column
+    -ms-flex-direction: column
+    flex-direction: column
+
+  &__nav
+
+    @include media(1024)
+      display: none
+  &__logo
+
+    @include media(1024)
+      width: 100%
+      display: flex
+      justify-content: space-between
+
+  &__logo-mob
+    margin-bottom: 82px
+    display: flex
+    justify-content: space-between
+    width: 100%
+
+  &__mob-ul
+    font-family: "Open Sans", sans-serif
+    color: #fff
+    font-size: 18px
+
+  &__mob-li
+    margin-bottom: 25px
 
   &__ul
     display: flex
@@ -42,20 +102,30 @@
 
 .socials
 
+
+  @include media(1024)
+    display: none
+
   &__link
     margin: 0 10px
-.mob__nav
-  display: none
-  //
-  //@include media(768)
-  //  display: block
+
+  &-mob
+    margin-top: 49px
+
+  &-mob__link
+    margin: 0 10px
+
+    &:first-child
+      margin-left: 0
+
+    &:last-child
+      margin-right: 0
 
 .people
   display: flex
   justify-content: space-between
 
-
-  @include media(1024)
+  @include media(1220)
     margin: 0 auto
 
   &__title-outer
@@ -116,25 +186,27 @@
     margin-top: 70px
     margin-left: 209px
 
-    @include media(1024)
+    @include media(1220)
       display: none
 
 
 .header__form
   display: flex
-  flex-wrap: wrap
   align-items: center
   width: 100%
   max-width: 540px
   margin-top: 34px
-  position: relative
+  background-color: #fff
+  border-radius: 60px
+  justify-content: space-between
+
 
   @include media(768)
     margin-top: 24px
     flex-direction: column
+    background-color: transparent
 
   &-input
-    min-width: 414px
     background: #fff
     border-radius: 60px
     font-family: 'Open Sans', sans-serif
@@ -159,11 +231,8 @@
     width: 100%
     justify-content: center
     padding: 13px 0
-    position: absolute
     left: 53%
 
     @include media(768)
       max-width: 100%
-      position: relative
-      left: 0
       margin-top: 10px

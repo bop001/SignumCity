@@ -4,6 +4,8 @@ header.header
             .header__logo
                 a.header__link(href='#')
                     img(src='img/svg/logo.svg')
+                .header__menu
+                    img(src='img/svg/Menu.svg')
             nav.header__nav
                 ul.header__ul
                     li.header__li
@@ -21,23 +23,31 @@ header.header
                     img(src='img/svg/insta.svg')
                 a.socials__link(href='')
                     img(src='img/svg/ufo.svg')
-            nav.mob__nav
-                ul.header__ul
-                    li.header__li
-                        a.header__link(href='#') About Us
-                    li.header__li
-                        a.header__link(href='#') Easy Money
-                    li.header__li
-                        a.header__link(href='#') Testimonials
-                .socials
-                    a.socials__link(href='')
-                        img(src='img/svg/twitter.svg')
-                    a.socials__link(href='')
-                        img(src='img/svg/facebook.svg')
-                    a.socials__link(href='')
-                        img(src='img/svg/insta.svg')
-                    a.socials__link(href='')
-                        img(src='img/svg/ufo.svg')
+
+        .header__wrapper-mob
+            .header__mob
+                .header__logo-mob
+                    a.header-mob__link(href='#')
+                        img(src='img/svg/logo.svg')
+                    .header-mob__link_close
+                        img(src='img/svg/Close.svg')
+                nav.header__mob-nav
+                    ul.header__mob-ul
+                        li.header__mob-li
+                            a.header__mob-link(href='#') About Us
+                        li.header__mob-li
+                            a.header__mob-link(href='#') Easy Money
+                        li.header__mob-li
+                            a.header__mob-link(href='#') Testimonials
+                    .socials-mob
+                        a.socials-mob__link(href='')
+                            img(src='img/svg/twitter.svg')
+                        a.socials-mob__link(href='')
+                            img(src='img/svg/facebook.svg')
+                        a.socials-mob__link(href='')
+                            img(src='img/svg/insta.svg')
+                        a.socials-mob__link(href='')
+                            img(src='img/svg/ufo.svg')
         .people
             .people__title-outer
                 h1.people__h1 | Play the Virtual
