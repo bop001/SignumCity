@@ -120,7 +120,7 @@ select, input, textarea {
         margin-left: 0; } }
   @media (max-width: 1024px) {
     .about__img {
-      margin-bottom: 20px; } }
+      margin-bottom: 24px; } }
 
 .about__wrapper {
   display: -webkit-box;
@@ -162,11 +162,17 @@ select, input, textarea {
   line-height: normal;
   font-size: 35px;
   color: #175E65; }
+  @media (max-width: 1024px) {
+    .about__title {
+      font-size: 25px; } }
 
 .about__text {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   color: #175E65; }
+  @media (max-width: 1024px) {
+    .about__text {
+      font-size: 16px; } }
   .about__text:first-child {
     font-weight: 300;
     margin-top: 26px; }
