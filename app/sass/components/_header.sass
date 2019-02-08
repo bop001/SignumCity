@@ -72,12 +72,16 @@
       width: 100%
       display: flex
       justify-content: space-between
+      align-items: center
 
   &__logo-mob
     margin-bottom: 82px
     display: flex
     justify-content: space-between
     width: 100%
+
+    @include media(375)
+      margin-bottom: 46px
 
   &__mob-ul
     font-family: "Open Sans", sans-serif
@@ -99,6 +103,16 @@
     font-weight: 600
     font-size: 18px
     color: #fff
+
+    @include media(375)
+      max-width: 160px
+
+  &-mob__link
+
+    @include media(375)
+      display: flex
+      align-items: center
+      max-width: 160px
 
 .socials
 

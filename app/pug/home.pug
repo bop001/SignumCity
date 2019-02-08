@@ -57,29 +57,30 @@ append content
                         .easy-money__item-title Win
                         .easy-money__item-text Tell us where to send the “crap tons” of money if you wi
                 .easy-money__form
-                    h2.easy-money__form-h2 | No boring scholarship essay!
+                    h2.easy-money__form-h2 No boring scholarship essay!
                         br
                         | Play stock investing games to win!
-                    form.easy__form
-                        input.easy__form-input(type='email' placeholder='Email')
-                        button.easy__form-btn(type='submit')
-                            | JOIN the Wait List
+                    .easy__form-outer
+                        form.easy__form
+                            input.easy__form-input(type='email' placeholder='Email')
+                            button.easy__form-btn(type='submit')
+                                | JOIN the Wait List
                         p.easy__form-text Hmm, still considering joining? We promise that we don’t bite, and we’ve had all our shots.
-    section.testimonials
-        .container
-            .testimonials__wrapper
-                h1.testimonials__h1 Testimonials
-                .testimonials__title Don't believe us? Well listen to our beta testers:
-                .testimonials__items
-                    each item in links
-                        .testimonials__items-outer
-                            .testimonials__item
-                                .testimonials__item-img
-                                    img(src=item.img)
-                                .testimonials__item-texts
-                                    .testimonials__item-title=item.name
-                                    .testimonials__item-text=item.text
-                .testimonials__text Of course, none of these people actually said any of this, but we think they would. Signum City is all this, and more.
+    //section.testimonials
+    //    .container
+    //        .testimonials__wrapper
+    //            h1.testimonials__h1 Testimonials
+    //            .testimonials__title Don't believe us? Well listen to our beta testers:
+    //            .testimonials__items
+    //                each item in links
+    //                    .testimonials__items-outer
+    //                        .testimonials__item
+    //                            .testimonials__item-img
+    //                                img(src=item.img)
+    //                            .testimonials__item-texts
+    //                                .testimonials__item-title=item.name
+    //                                .testimonials__item-text=item.text
+    //            .testimonials__text Of course, none of these people actually said any of this, but we think they would. Signum City is all this, and more.
     section.laptop
         .container
             .laptop__wrapper

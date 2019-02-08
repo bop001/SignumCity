@@ -10,10 +10,37 @@
     align-items: center
     justify-content: center
     margin: 0 auto
-    position: relative
+    width: 100%
+
+    @include media(375)
+      margin-top: 35px
 
   &-soc
     margin-top: 34px
+
+    @include media(375)
+      margin-top: 19px
+
+  &__ul
+    display: flex
+    margin-left: 81px
+
+    @include media(768)
+      flex-direction: column
+      margin-left: 0
+
+  &__li
+    margin-right: 43px
+
+    @include media(768)
+      margin-right: 0
+      margin-bottom: 15px
+
+  &__link
+    font-family: 'Open Sans', sans-serif
+    font-weight: 600
+    font-size: 18px
+    color: #fff
 
 .copyright
   margin-top: 38px
@@ -23,7 +50,20 @@
   font-size: 12px
   margin-bottom: 30px
 
+  @include media(375)
+    margin-top: 34px
+
 .btn-up
   position: fixed
   right: 200px
   bottom: 101px
+
+  @include media(1024)
+    right: 20px
+
+  @include media(375)
+    right: 0
+    bottom: 230px
+
+.socials.footer-soc
+  display: flex
