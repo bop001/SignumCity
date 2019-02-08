@@ -62,9 +62,6 @@
         margin-bottom: 49px
       
 .easy-money
-  display: flex
-  flex: 1 1
-  justify-content: center
   margin: 0 auto
   background: url(../img/Background-easy-money.png) no-repeat
   background-position-x: center
@@ -93,10 +90,11 @@
   &__item-outer
     margin-top: 77px
     display: flex
+    justify-content: center
     font-family: 'Open Sans', sans-serif
     color: #FFF5BB
     width: 100%
-    max-width: 970px
+    max-width: 1100px
 
     @include media(1024)
       margin-top: 31px
@@ -105,8 +103,6 @@
     display: flex!important
     flex-direction: column
     flex-wrap: wrap
-    width: 33%
-    max-width: 300px
     margin: 0 50px
 
     &:first-child
@@ -124,6 +120,12 @@
     font-size: 23px
     font-weight: bold
     margin-top: 21px
+
+  &__item-text
+
+    @include media(1024)
+      max-width: 320px
+      margin: 0 auto
 
   &__form-outer
     max-width: 540px
@@ -145,13 +147,11 @@
     font-size: 23px
     font-weight: bold
     text-align: left
-    width: 50%
+    max-width: 500px
 
     @include media(1024)
       width: 100%
-      margin-bottom: 25px
-
-    @include media(768)
+      font-size: 18px
       margin-bottom: 25px
 
   &__form-outer
@@ -164,7 +164,6 @@
   align-items: center
   width: 100%
   max-width: 540px
-  position: relative
   background-color: #fff
   border-radius: 60px
   justify-content: space-between
@@ -202,8 +201,6 @@
     width: 100%
     justify-content: center
     padding: 13px 0
-    left: 53%
-    top: 0
 
     @include media(1024)
       max-width: 100%
@@ -220,11 +217,31 @@
     margin-bottom: 107px
     max-width: 540px
 
+    @include media(1024)
+      font-size: 14px
+      font-weight: 400
+      margin-bottom: 138px
+
 .slick-dots
   position: absolute
+  display: flex
+  bottom: -36px
+
+  & button
+    font-size: 0
+    width: 15px
+    height: 15px
+    background: #fff
+    opacity: .25
+    border-radius: 50%
+    margin: 6px
+
+.slick-active
+
+  & button
+    opacity: 1
 
 .testimonials
-
 
   &__wrapper
     display: flex
@@ -238,12 +255,26 @@
     color: #175E65
     margin-bottom: 63px
 
+    @include media(1024)
+      margin: 21px auto
+
   &__title
     font-family: "Open Sans", sans-serif
     font-size: 23px
     font-weight: 300
     color: #175E65
     margin-bottom: 83px
+
+    & span
+
+      @include media(375)
+        display: flex
+        flex-wrap: wrap
+
+    @include media(1024)
+      font-size: 16px
+      margin-bottom: 56px
+      text-align: center
 
   &__items
     max-width: 1100px
@@ -256,6 +287,14 @@
     width: 100%
     padding-bottom: 18px
 
+    @include media(1024)
+      flex-direction: column
+      align-items: center
+
+  &__items-outer
+    display: flex
+    flex-direction: column
+
   &__item-img
     width: 146px
     height: 146px
@@ -263,28 +302,49 @@
 
     img
       width: 100%
+
+    @include media(1024)
+      width: 100px
+      height: 100px
+      margin-right: 0
       
   &__item-texts
     max-width: 587px
     font-family: "Open Sans", sans-serif
     color: #175E65
+    text-align: left
 
+    @include media(1024)
+      text-align: center
 
   &__item-title
     font-size: 20px
     font-weight: bold
     margin-bottom: 10px
 
+    @include media(1024)
+      font-size: 14px
+      margin-top: 23px
+
   &__item-text
     font-size: 23px
     font-style: italic
     position: relative
+
+    @include media(1024)
+      font-size: 18px
 
     &::after
       content: url(../img/svg/quotes.svg)
       position: absolute
       right: 0
       bottom: -30px
+
+      @include media(1024)
+        right: 633px
+        bottom: 50px
+        transform: rotate(180deg)
+        z-index: -1
 
   &__text
     margin-top: 112px
@@ -296,14 +356,55 @@
     max-width: 780px
     margin-bottom: 156px
 
+    @include media(1024)
+      margin-top: 62px
+      font-size: 16px
+      margin-bottom: 45px
+
 .slick-prev.slick-arrow,
 .slick-next.slick-arrow
   position: absolute
   top: 50%
-  transform: translate(-50%)
+  transform: translate(-50%,-50%)
+
+  @include media(1024)
+    display: none!important
+
+    .slick-next.slick-arrow
+      right: -20px
 
 .slick-next.slick-arrow
-  right: 0
+  right: -43px
+
+.slick-prev.slick-arrow
+  left: -15px
+
+.testimonials__items.slick-initialized.slick-slider.slick-dotted
+
+  .slick-dots
+    display: none
+
+    @include media(1024)
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      display: flex
+      bottom: -16px
+
+      & button
+        font-size: 0
+        width: 15px
+        height: 15px
+        background: #fff
+        opacity: .25
+        border-radius: 50%
+        margin: 6px
+        background: #F86544
+
+    .slick-active
+
+      & button
+        opacity: 1
 
 .laptop
   background: url(../img/Background-footer.png) no-repeat

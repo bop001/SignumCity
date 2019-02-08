@@ -66,21 +66,22 @@ append content
                             button.easy__form-btn(type='submit')
                                 | JOIN the Wait List
                         p.easy__form-text Hmm, still considering joining? We promise that we don’t bite, and we’ve had all our shots.
-    //section.testimonials
-    //    .container
-    //        .testimonials__wrapper
-    //            h1.testimonials__h1 Testimonials
-    //            .testimonials__title Don't believe us? Well listen to our beta testers:
-    //            .testimonials__items
-    //                each item in links
-    //                    .testimonials__items-outer
-    //                        .testimonials__item
-    //                            .testimonials__item-img
-    //                                img(src=item.img)
-    //                            .testimonials__item-texts
-    //                                .testimonials__item-title=item.name
-    //                                .testimonials__item-text=item.text
-    //            .testimonials__text Of course, none of these people actually said any of this, but we think they would. Signum City is all this, and more.
+    section.testimonials
+        .container
+            .testimonials__wrapper
+                h1.testimonials__h1 Testimonials
+                .testimonials__title Don't believe us?
+                    span  Well listen to our beta testers:
+                .testimonials__items
+                    each item in links
+                        .testimonials__items-outer
+                            .testimonials__item
+                                .testimonials__item-img
+                                    img(src=item.img)
+                                .testimonials__item-texts
+                                    .testimonials__item-title=item.name
+                                    .testimonials__item-text=item.text
+                .testimonials__text Of course, none of these people actually said any of this, but we think they would. Signum City is all this, and more.
     section.laptop
         .container
             .laptop__wrapper

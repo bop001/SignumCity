@@ -1,17 +1,8 @@
 $( document ).ready(function() {
     preloader();//Fade preloader when page loaded
     easySlider();
+    testimonialsSlider();
     mediaQueries();
-
-    var testimonialsProps = {
-        dots: false,
-        arrows: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        prevArrow: '<button type="button" class="slick-prev"><img src="../img/svg/arrow-prev.svg" alt="img"></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="../img/svg/arrow-next.svg" alt="img"></button>'
-    };
-    initSlick($('.testimonials__items'), testimonialsProps);
     lazyScroll($('.header'),700);
     lazyScrollFade($('.btn-up'), 100);
     fadeMenu();
@@ -45,6 +36,28 @@ function easySlider() {
         }
     }
 }
+function testimonialsSlider() {
+    var testimonialsProps = {
+        dots: true,
+        arrows: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-prev"><img src="../img/svg/arrow-prev.svg" alt="img"></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="../img/svg/arrow-next.svg" alt="img"></button>'
+    };
+
+    var slider = $('.testimonials__items');
+    if ($(window).width() > 0) {
+        if (slider.hasClass('slick-slider')) {
+            slider.slick('unslick');
+        }
+        initSlick(slider, testimonialsProps);
+    } else {
+        if (slider.hasClass('slick-slider')) {
+            slider.slick('unslick');
+        }
+    }
+}
 
 function initSlick(slider, props) {
     slider.slick(props);
@@ -54,6 +67,7 @@ function mediaQueries(){
     easySlider();
     $( window ).resize(function() {
         easySlider();
+        testimonialsSlider();
     });
 }
 
@@ -77,40 +91,6 @@ function lazyScroll(anchor, speed) {
         e.preventDefault();
         var href = $(this).attr("href");
         $("html, body").animate({scrollTop:$(href).offset().top}, speed);
-    });
-}
-
-function mmenuToggle(menu, icon){
-    var $menu = menu.mmenu({
-        "extensions": [
-            "position-left",
-            "theme-white",
-        ]
-    });
-    var $icon = icon;
-    var api = $menu.data( "mmenu" );
-    $icon.on( "click", function() {
-        api.open();
-    });
-    api.bind( "open:start", function() {
-        $('body').addClass('menu-open');
-    });
-    api.bind( "open:finish", function() {
-        setTimeout(function() {
-            $icon.addClass( "is-active" );
-        }, 100);
-        $icon.on( "click", function() {
-            api.close();
-        });
-    });
-    api.bind( "close:finish", function() {
-        $('body').removeClass('menu-open');
-        setTimeout(function() {
-            $icon.removeClass( "is-active" );
-        }, 100);
-        $icon.on( "click", function() {
-            api.open();
-        });
     });
 }
 function fadeMenu() {
