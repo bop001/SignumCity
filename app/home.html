@@ -74,8 +74,8 @@
                 <h1 class="people__h1">Play the Virtual<br>Stock Market<br>Win College Money</h1>
                 <h2 class="people__h2">  Win scholarship money or loan repayment Beginning May 2019, 100% Free - no catch</h2>
                 <h3 class="people__h3"> Education is expensive. We want to help. Join the wait list and get 10,000 virtual dollars in your trading account.</h3>
-                <form class="header__form">
-                  <input class="header__form-input" type="email" placeholder="Email">
+                <form class="header__form" action="php/send-form.php" method="post" name="with-header" required>
+                  <input class="header__form-input" type="email" name="email" placeholder="Email">
                   <button class="header__form-btn" type="submit">JOIN the Wait List</button>
                 </form>
                 <p class="people__text">We don’t spam you, but will alert you when starting awesome contests</p>
@@ -197,6 +197,13 @@
             </div>
           </div>
         </section>
+        <div class="popap">
+          <div class="congrats">
+            <div class="congrats__img"><img src="img/svg/Congrats.svg"></div>
+            <p class="congrats__text">Congrats!<span>You are now оn the Wait List!</span></p>
+            <button> Hurray!</button>
+          </div>
+        </div>
       </div>
       <div class="footer-wrapper" id="footerWrapper">
         <footer class="footer">

@@ -510,3 +510,54 @@
 
   @include media(1024)
     background: none
+
+.popap
+  display: none
+  background: rgba(0, 0, 0, .7)
+  height: 100vh
+  width: 100vw
+  overflow: hidden
+  position: fixed
+  top: 0px
+  z-index: 100
+
+  & .congrats
+    display: flex
+    flex-direction: column
+    align-items: center
+    max-width: 600px
+    max-height: 480px
+    margin: 137px auto
+    background: #fff
+    border-radius: 25px
+
+    &__img
+      max-width: 344px
+      margin: 34px auto 35px
+
+    &__text
+      font-family: Circe
+      line-height: 27px
+      font-size: 23px
+      color: #175E65
+      max-width: 288px
+      text-align: center
+      font-weight: bold
+      display: flex
+      flex-direction: column
+      margin-bottom: 27px
+
+    & button
+      font-family: 'Open Sans', sans-serif
+      color: #fff
+      font-size: 18px
+      font-weight: bold
+      text-transform: capitalize
+      background: linear-gradient(90deg, #F86544 0%, #D83B17 100%)
+      padding: 12px 0 13px
+      max-width: 200px
+      display: flex
+      justify-content: center
+      border-radius: 60px
+      width: 100%
+      margin-bottom: 70px
