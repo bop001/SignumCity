@@ -1,23 +1,19 @@
 .about
 
   &__img
-    max-width: 533px
-    width: 50%
-    margin-bottom: 65px
-
+    margin-left: -44px
 
     @include media(1024)
-      width: 100%
+      width: 94%
+      margin: 6px auto 11px
+      min-height: auto
+      max-height: 315px
 
     img
-      margin-left: -33px
 
-      @include media(1200)
-        margin-left: 0
+      @include media(1024)
+        width: 100%
 
-
-    @include media(1024)
-      margin-bottom: 24px
 
   &__wrapper
     display: flex
@@ -25,33 +21,43 @@
     margin-top: 35px
     margin-top: 35px
     width: 100%
+    margin-bottom: 57px
 
     @include media(1024)
       flex-direction: column
       flex-wrap: wrap
       justify-content: center
+      margin-top: -74px
 
   &__outer
     width: 50%
     margin-left: 152px
+    padding-top: 67px
 
     @include media(1024)
       margin-left: 0
       width: 100%
+      padding-top: 5px
 
   &__title
     font-family: Circe
     line-height: normal
     font-size: 35px
     color: #175E65
+    text-transform: capitalize
+    margin-bottom: 27px
 
     @include media(1024)
       font-size: 25px
+      font-weight: bold
+      letter-spacing: 1.4px
+      margin-bottom: 21px
 
   &__text
     font-family: 'Open Sans', sans-serif
     font-size: 18px
     color: #175E65
+    letter-spacing: 0
 
     @include media(1024)
       font-size: 16px
@@ -60,12 +66,18 @@
       font-weight: 300
       margin-top: 26px
 
+    &:nth-child(2)
+      max-width: 450px
+
     &:last-child
       font-weight: bold
       margin-top: 25px
+      margin-bottom: 113px
+      max-width: 440px
 
       @include media(1024)
-        margin-bottom: 49px
+        margin-bottom: -7px
+        margin-top: 21px
       
 .easy-money
   margin: 0 auto
@@ -75,6 +87,7 @@
   @include media(768)
     background: url(../img/Background-easy-money-mob.png) no-repeat
     background-position-x: center
+    background-position-y: -82px
     background-size: cover
 
   &__wrapper
@@ -85,16 +98,21 @@
     text-align: center
 
     @include media(1024)
-      margin-top: 49px
+      margin-top: 35px
 
   &__title
     color: #fff
     font-family: Circe
     font-size: 35px
     font-weight: bold
+    margin-right: 65px
+
+    @include media(1024)
+      font-size: 25px
+      margin-right: 0
 
   &__item-outer
-    margin-top: 77px
+    margin-top: 71px
     display: flex
     justify-content: center
     font-family: 'Open Sans', sans-serif
@@ -109,29 +127,39 @@
     display: flex!important
     flex-direction: column
     flex-wrap: wrap
-    margin: 0 50px
-
-    &:first-child
-      margin-left: 0
-
-    &:last-child
-      margin-right: 0
+    margin: 0 116px
 
     @include media(1024)
       margin: 0 auto
 
+  & img
 
+    @include media(1024)
+      width: 33%
+      margin: 0 auto
 
   &__item-title
     font-size: 23px
     font-weight: bold
-    margin-top: 21px
+    margin-top: 7px
+
+    @include media(1024)
+      font-size: 16px
+      margin-top: 11px
+      letter-spacing: 0
 
   &__item-text
+    color: #fff
+    margin: 5px -64px
+    font-size: 18px
+    letter-spacing: 0
 
     @include media(1024)
       max-width: 320px
       margin: 0 auto
+      margin-top: 9px
+      letter-spacing: -0.7px
+      width: 78%
 
   &__form-outer
     max-width: 540px
@@ -140,12 +168,13 @@
     display: flex
     align-items: flex-start
     justify-content: space-between
-    margin-top: 110px
+    margin-top: 107px
 
     @include media(1024)
       flex-direction: column
       margin: 0 auto
-      margin-top: 72px
+      margin-top: 120px
+      letter-spacing: 0.1px
 
   &__form-h2
     color: #fff
@@ -158,10 +187,7 @@
     @include media(1024)
       width: 100%
       font-size: 18px
-      margin-bottom: 25px
 
-  &__form-outer
-    width: 50%
 
 .easy__form,
 .laptop__form
@@ -173,9 +199,11 @@
   background-color: #fff
   border-radius: 60px
   justify-content: space-between
+  border: 1px solid #CDCDCD
 
   @include media(1024)
     background-color: transparent
+    border: 1px solid transparent
 
 
   @include media(768)
@@ -190,6 +218,15 @@
     font-weight: normal
     font-size: 18px
     color: #175E65
+
+    &:focus
+      color: #16A6B3
+
+    &::placeholder
+      color: #CDCDCD
+
+    &:focus::placeholder
+      color: #16A6B3
 
     @include media(1024)
       width: 100%
@@ -207,6 +244,11 @@
     width: 100%
     justify-content: center
     padding: 13px 0
+    margin: -2px
+    transition: .5s ease
+
+    &:hover
+      background: linear-gradient(90deg, #FF8A6F 0%, #E26447 100%)
 
     @include media(1024)
       max-width: 100%
@@ -222,16 +264,27 @@
     text-align: left
     margin-bottom: 107px
     max-width: 540px
+    letter-spacing: 0
 
     @include media(1024)
       font-size: 14px
       font-weight: 400
       margin-bottom: 138px
 
+  &-outer
+    margin-right: 64px
+    margin-top: 4px
+
+    @include media(1024)
+      margin-right: 0
+
 .slick-dots
   position: absolute
   display: flex
   bottom: -36px
+
+  @include media(1024)
+    bottom: -54px
 
   & button
     font-size: 0
@@ -255,23 +308,31 @@
     flex-direction: column
     align-items: center
 
+    @include media(1024)
+      margin-top: -120px
+
   &__h1
     font-family: Circe
     font-size: 35px
     color: #175E65
     margin-bottom: 63px
+    margin-right: 65px
+    margin-top: -5px
 
     @include media(1024)
-      margin: 21px auto
+      margin: 31px auto 20px
+      font-size: 25px
 
   &__title
     font-family: "Open Sans", sans-serif
     font-size: 23px
     font-weight: 300
     color: #175E65
-    margin-bottom: 83px
+    margin-bottom: 77px
+    margin-right: 68px
 
     & span
+      margin-left: 10px
 
       @include media(375)
         display: flex
@@ -281,10 +342,16 @@
       font-size: 16px
       margin-bottom: 56px
       text-align: center
+      margin-right: 9px
+      letter-spacing: 0
 
   &__items
     max-width: 1100px
     width: 100%
+    margin-right: 65px
+
+    @include media(1024)
+      margin-right: 0
 
   &__item
     display: flex
@@ -334,8 +401,11 @@
 
   &__item-text
     font-size: 23px
+    font-family: 'Open Sans', sans-serif
     font-style: italic
     position: relative
+    line-height: normal
+    letter-spacing: -0.7px
 
     @include media(1024)
       font-size: 18px
@@ -353,25 +423,29 @@
         z-index: -1
 
   &__text
-    margin-top: 112px
+    margin-top: 86px
     text-align: center
     font-family: "Open Sans", sans-serif
     font-size: 23px
     font-weight: 300
     color: #175E65
     max-width: 780px
-    margin-bottom: 156px
+    margin-right: 65px
+    margin-bottom: 160px
+    letter-spacing: 0
 
     @include media(1024)
-      margin-top: 62px
+      margin-top: 94px
       font-size: 16px
       margin-bottom: 45px
+      margin-right: 0
+      width: 90%
 
 .slick-prev.slick-arrow,
 .slick-next.slick-arrow
   position: absolute
   top: 50%
-  transform: translate(-50%,-50%)
+  transform: translate(-138%,-66%)
 
   @include media(1024)
     display: none!important
@@ -383,48 +457,55 @@
   right: -43px
 
 .slick-prev.slick-arrow
-  left: -15px
+  left: 39px
+  z-index: 100
 
 .testimonials__items.slick-initialized.slick-slider.slick-dotted
 
-  .slick-dots
-    display: none
+  & .slick-dots
+      display: none
 
-    @include media(1024)
-      position: absolute
-      left: 50%
-      transform: translateX(-50%)
-      display: flex
-      bottom: -16px
+      @include media(1024)
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        display: flex
+        bottom: -38px
+        right: 60px
 
-      & button
-        font-size: 0
-        width: 15px
-        height: 15px
-        background: #fff
-        opacity: .25
-        border-radius: 50%
-        margin: 6px
-        background: #F86544
+        & button
+          font-size: 0
+          width: 15px
+          height: 15px
+          background: #fff
+          opacity: .25
+          border-radius: 50%
+          margin: 6px
+          background: #F86544
 
-    .slick-active
+      .slick-active
 
-      & button
-        opacity: 1
+        & button
+          opacity: 1
 
 .laptop
   background: url(../img/Background-footer.png) no-repeat
-  background-position-x: center
+  background-position: -76px -5px
   background-size: 100% cover
+
+  @include media(768)
+    flex-direction: column
+    background-color: transparent
 
   @include media(375)
     background: url(../img/Background-footer-mob.png) no-repeat
     background-position: bottom
+    background-position-y: -3px
 
   &__wrapper
     width: 100%
     display: flex
-    padding: 204px 0 112px
+    padding: 181px 0px 121px
 
     @include media(1024)
       padding: 204px 0 52px
@@ -436,44 +517,50 @@
       padding: 109px 0px 89px
 
     @include media(375)
-      padding: 75px 0 66px
+      padding: 82px 0 66px
 
   &__texts
     display: flex
     flex-direction: column
     width: 100%
 
-  &__texts-text
+  &__texts-text,
+  &__texts-text-second
     color: #fff
     font-family: "Open Sans", sans-serif
     font-size: 23px
     max-width: 546px
+    margin-top: -11px
+    letter-spacing: 0
 
     @include media(375)
       font-size: 18px
 
     &:first-child
       font-weight: 300
-      margin-bottom: 20px
+      margin-bottom: 41px
+      letter-spacing: 0
 
-    &:last-child
-      font-weight: bold
+  &__texts-text-second
+    font-weight: bold
+    letter-spacing: -0.4px
+
+    @include media(1024)
+      margin-top: -14px
 
   &__form
     display: flex
     align-items: center
     width: 100%
     max-width: 540px
-    margin-top: 34px
+    margin-top: 48px
     background-color: #fff
     border-radius: 60px
     justify-content: space-between
 
+    @include media(1024)
+      margin-top: 32px
 
-  @include media(768)
-    margin-top: 24px
-    flex-direction: column
-    background-color: transparent
 
   &-input
     background: #fff
@@ -501,6 +588,7 @@
     justify-content: center
     padding: 13px 0
     left: 53%
+    margin: -2px
 
     @include media(768)
       max-width: 100%
@@ -561,3 +649,6 @@
       border-radius: 60px
       width: 100%
       margin-bottom: 70px
+
+  &.show
+    display: block

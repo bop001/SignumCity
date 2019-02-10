@@ -13,57 +13,80 @@
     width: 100%
 
     @include media(375)
-      margin-top: 35px
+      margin-top: 33px
 
   &-soc
-    margin-top: 34px
+    margin-left: 0!important
+    margin-top: 32px
+    margin-right: 64px
 
     @include media(375)
       margin-top: 19px
 
   &__ul
     display: flex
-    margin-left: 81px
+    justify-content: center
 
     @include media(768)
       flex-direction: column
       margin-left: 0
 
   &__li
-    margin-right: 43px
+    margin-right: 73px
+    margin-top: 4px
 
     @include media(768)
       margin-right: 0
-      margin-bottom: 15px
+      margin: 7.5px auto
+
 
   &__link
     font-family: 'Open Sans', sans-serif
     font-weight: 600
     font-size: 18px
     color: #fff
+    transition: .3s
+    letter-spacing: 0.2px
+
+    &:hover
+      color: #A6F8FF
+
+  &__nav
+    margin-top: 27px
+
+    @include media(375)
+      margin-top: -6px
 
 .copyright
-  margin-top: 38px
+  margin-top: 31px
+  margin-right: 65px
   font-family: "Open Sans", sans-serif
   color: #fff
   font-weight: 300
   font-size: 12px
   margin-bottom: 30px
+  letter-spacing: 0
 
   @include media(375)
-    margin-top: 34px
+    margin-top: 27px
+    margin-right: 0
+    margin-bottom: 36px
 
 .btn-up
   position: fixed
-  right: 200px
-  bottom: 101px
+  right: 87px
+  bottom: 78px
 
   @include media(1024)
     right: 20px
 
   @include media(375)
-    right: 0
-    bottom: 230px
+    right: 2px
+    bottom: 226px
 
 .socials.footer-soc
   display: flex
+
+  @include media(375)
+    margin-top: 24px
+    margin-right: 0

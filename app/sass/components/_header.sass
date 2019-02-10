@@ -1,5 +1,5 @@
 .container
-  max-width: 1100px
+  max-width: 1163px
   display: flex
   flex-wrap: wrap
   margin: 0 auto
@@ -16,6 +16,7 @@
 
   @include media(375)
     background: url(../img/Background-header-mob.png) no-repeat
+    background-position-y: -70px
 
   &__menu
     display: none
@@ -26,7 +27,6 @@
   &__wrapper
     display: flex
     width: 100%
-    justify-content: space-between
     margin-top: 28px
 
     @include media(1024)
@@ -82,29 +82,42 @@
 
   &__mob-ul
     font-family: "Open Sans", sans-serif
-    color: #fff
     font-size: 18px
-
+    color: #fff
+    
   &__mob-li
     margin-bottom: 25px
 
   &__ul
     display: flex
     margin-left: 81px
+    margin-top: 3px
+
 
   &__li
-    margin-right: 43px
+    margin-right: 46px
 
   &__link
     font-family: 'Open Sans', sans-serif
     font-weight: 600
     font-size: 18px
     color: #fff
+    transition: .3s
+
+    & img
+      width: 100%
+
+    &:hover
+      color: #A6F8FF
 
     @include media(375)
       max-width: 160px
 
   &-mob__link
+
+    & img
+      width: 100%
+      margin-top: -5px
 
     @include media(375)
       display: flex
@@ -112,13 +125,14 @@
       max-width: 160px
 
 .socials
-
+  margin-left: 149px
 
   @include media(1024)
     display: none
 
   &__link
     margin: 0 10px
+
 
   &-mob
     margin-top: 49px
@@ -136,7 +150,7 @@
   display: flex
   justify-content: space-between
   max-width: 1100px
-  margin-top: 80px
+  margin-top: 75px
   width: 100%
 
   @include media(1220)
@@ -148,7 +162,7 @@
     max-width: 621px
 
     @include media(1024)
-      margin-top: 46px
+      margin-top: 32px
 
   &__h1
     font-family: Circe
@@ -166,8 +180,9 @@
     font-family: 'Open Sans', sans-serif
     font-size: 23px
     line-height: 34px
-    margin-top: 32px
+    margin-top: 27px
     max-width: 563px
+    letter-spacing: 0
 
     @include media(768)
       margin-top: 17px
@@ -182,11 +197,14 @@
     color: #fff
     max-width: 540px
     margin-top: 11px
+    letter-spacing: 0
 
     @include media(768)
       font-size: 16px
       font-weight: 300
       line-height: 24px
+      margin-top: 7px
+      color: #FFF5BB
 
   &__text
     font-family: 'Open Sans', sans-serif
@@ -194,9 +212,14 @@
     color: #fff
     max-width: 524px
     margin-top: 7px
+    letter-spacing: 0
+
+    @include media(1024)
+      letter-spacing: -1px
 
   &__img
-    margin-right: -80px
+    margin-top: -14px
+    margin-right: -95px
 
     @include media(1220)
       display: none
@@ -207,11 +230,17 @@
   align-items: center
   width: 100%
   max-width: 540px
-  margin-top: 34px
+  margin-top: 35px
   background-color: #fff
   border-radius: 60px
   justify-content: space-between
+  border: 1px solid #CDCDCD
 
+  &:hover:focus
+    border: 1px solid #000
+
+  @include media(1024)
+    border: 1px solid transparent
 
   @include media(768)
     margin-top: 24px
@@ -226,6 +255,20 @@
     font-weight: normal
     font-size: 18px
     color: #175E65
+
+    &:focus
+
+      .header__form
+        border: 1px solid #000
+
+    &:focus
+      color: #16A6B3
+
+    &::placeholder
+      color: #CDCDCD
+
+    &:focus::placeholder
+      color: #16A6B3
 
     @include media(768)
       width: 100%
@@ -244,6 +287,11 @@
     justify-content: center
     padding: 13px 0
     left: 53%
+    margin: -2px
+    transition: .5s ease
+
+    &:hover
+      background: linear-gradient(90deg, #FF8A6F 0%, #E26447 100%)
 
     @include media(768)
       max-width: 100%

@@ -3,9 +3,11 @@ $( document ).ready(function() {
     easySlider();
     testimonialsSlider();
     mediaQueries();
-    lazyScroll($('.header'),700);
+    lazyScroll($('.socials'),700);
     lazyScrollFade($('.btn-up'), 100);
     fadeMenu();
+
+
 });
 
 
@@ -74,7 +76,7 @@ function mediaQueries(){
 
 function lazyScrollFade(anchor, speed) {
     $(window).scroll(function(){
-        if ($(window).scrollTop() >= 350) {
+        if ($(window).scrollTop() >= 950) {
             anchor.fadeIn();
         }else{
             anchor.fadeOut();

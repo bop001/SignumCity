@@ -74,8 +74,11 @@
                 <h1 class="people__h1">Play the Virtual<br>Stock Market<br>Win College Money</h1>
                 <h2 class="people__h2">  Win scholarship money or loan repayment Beginning May 2019, 100% Free - no catch</h2>
                 <h3 class="people__h3"> Education is expensive. We want to help. Join the wait list and get 10,000 virtual dollars in your trading account.</h3>
-                <form class="header__form" action="php/send-form.php" method="post" name="with-header" required>
-                  <input class="header__form-input" type="email" name="email" placeholder="Email">
+                <form class="header__form">
+                  <input type="hidden" name="project_name" value="SignumCitt">
+                  <input type="hidden" name="admin_email" value="sashaburlachenkon@gmail.com">
+                  <input type="hidden" name="form_subject" value="With header form">
+                  <input class="header__form-input" type="email" placeholder="Email">
                   <button class="header__form-btn" type="submit">JOIN the Wait List</button>
                 </form>
                 <p class="people__text">We don’t spam you, but will alert you when starting awesome contests</p>
@@ -131,7 +134,7 @@
           <div class="container">
             <div class="testimonials__wrapper">
               <h1 class="testimonials__h1">Testimonials</h1>
-              <div class="testimonials__title">Don't believe us?<span> Well listen to our beta testers:</span></div>
+              <div class="testimonials__title">Don't believe us?<span>  Well listen to our beta testers:</span></div>
               <div class="testimonials__items">
                 <div class="testimonials__items-outer">
                   <div class="testimonials__item">
@@ -187,11 +190,14 @@
           <div class="container">
             <div class="laptop__wrapper">
               <div class="laptop__texts">
-                <div class="laptop__texts-text">Please don’t make us beg, although<br>we’re not beneath that.</div>
-                <div class="laptop__texts-text">You know you want those $10,000 virtual dollars.</div>
-                <form class="laptop__form">
-                  <input class="laptop__form-input" type="email" placeholder="Email">
-                  <button class="laptop__form-btn" type="submit">JOIN the Wait List</button>
+                <div class="laptop__texts-text">Please don’t make us beg, although<span> we’re not beneath that.</span></div>
+                <div class="laptop__texts-text-second">You know you want those $10,000 virtual dollars.</div>
+                <form class="laptop__form" id="laptop__form">
+                  <input type="hidden" name="project_name" value="Site Name">
+                  <input type="hidden" name="admin_email" value="admin@mail.com">
+                  <input type="hidden" name="form_subject" value="Form Subject">
+                  <input class="laptop__form-input" type="text" name="E-mail" placeholder="You E-mail..." required="">
+                  <button class="laptop__form-btn">JOIN the Wait List</button>
                 </form>
               </div>
             </div>
