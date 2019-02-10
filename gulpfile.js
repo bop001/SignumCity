@@ -107,3 +107,4 @@ gulp.task('watch', ['browser-sync', 'pug', 'sass', 'css-libs', 'scripts'], funct
   gulp.watch('app/pug/**/*.pug', ['pug']);
   gulp.watch('app/js/*.js', browserSync.reload);
 });
+

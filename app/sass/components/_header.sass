@@ -29,7 +29,7 @@
     width: 100%
     margin-top: 28px
 
-    @include media(1024)
+    @include media(375)
       margin-top: 13px
 
   &__wrapper-mob
@@ -63,6 +63,7 @@
 
     @include media(1024)
       display: none
+
   &__logo
 
     @include media(1024)
@@ -76,6 +77,9 @@
     display: flex
     justify-content: space-between
     width: 100%
+
+    @include media(1024)
+      margin-top: 23px
 
     @include media(375)
       margin-bottom: 46px
@@ -127,7 +131,7 @@
 .socials
   margin-left: 149px
 
-  @include media(1024)
+  @include media(1027)
     display: none
 
   &__link
@@ -146,6 +150,17 @@
     &:last-child
       margin-right: 0
 
+  &__svg
+    transition: .3s
+
+    &:hover
+
+      & path
+        fill: #A6F8FF
+
+      & circle
+        stroke: #A6F8FF
+
 .people
   display: flex
   justify-content: space-between
@@ -161,7 +176,7 @@
     flex-direction: column
     max-width: 621px
 
-    @include media(1024)
+    @include media(375)
       margin-top: 32px
 
   &__h1
@@ -171,7 +186,7 @@
     color: #fff
     max-width: 621px
 
-    @include media(768)
+    @include media(375)
       font-size: 35px
       line-height: normal
 
@@ -184,7 +199,7 @@
     max-width: 563px
     letter-spacing: 0
 
-    @include media(768)
+    @include media(375)
       margin-top: 17px
       font-size: 16px
       line-height: 24px
@@ -199,7 +214,7 @@
     margin-top: 11px
     letter-spacing: 0
 
-    @include media(768)
+    @include media(375)
       font-size: 16px
       font-weight: 300
       line-height: 24px
@@ -214,7 +229,7 @@
     margin-top: 7px
     letter-spacing: 0
 
-    @include media(1024)
+    @include media(375)
       letter-spacing: -1px
 
   &__img
@@ -239,13 +254,11 @@
   &:hover:focus
     border: 1px solid #000
 
-  @include media(1024)
-    border: 1px solid transparent
-
   @include media(768)
     margin-top: 24px
     flex-direction: column
     background-color: transparent
+    border: 1px solid transparent
 
   &-input
     background: #fff

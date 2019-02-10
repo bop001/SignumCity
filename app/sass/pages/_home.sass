@@ -4,10 +4,16 @@
     margin-left: -44px
 
     @include media(1024)
+      margin-top: 96px
+
+    @include media(768)
       width: 94%
-      margin: 6px auto 11px
+      margin: 100px auto 385px
       min-height: auto
       max-height: 315px
+
+    @include media(375)
+      margin: 7px auto 11px
 
     img
 
@@ -68,6 +74,7 @@
 
     &:nth-child(2)
       max-width: 450px
+      max-width: 100%
 
     &:last-child
       font-weight: bold
@@ -78,6 +85,7 @@
       @include media(1024)
         margin-bottom: -7px
         margin-top: 21px
+        max-width: 100%
       
 .easy-money
   margin: 0 auto
@@ -87,8 +95,10 @@
   @include media(768)
     background: url(../img/Background-easy-money-mob.png) no-repeat
     background-position-x: center
-    background-position-y: -82px
     background-size: cover
+
+  @include media(375)
+    background-position-y: -82px
 
   &__wrapper
     display: flex
@@ -285,6 +295,7 @@
 
   @include media(1024)
     bottom: -54px
+    justify-content: center
 
   & button
     font-size: 0
