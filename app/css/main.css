@@ -381,7 +381,7 @@ select, input, textarea {
     padding: 12px 16px;
     font-weight: normal;
     font-size: 18px;
-    color: #175E65; }
+    color: #E5E5E5; }
     .easy__form-input:focus,
     .laptop__form-input:focus {
       color: #16A6B3; }
@@ -939,6 +939,16 @@ select, input, textarea {
   .popap.show {
     display: block; }
 
+.arow {
+  opacity: 0.2;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s; }
+  .arow:hover {
+    opacity: 1; }
+  .arow:active {
+    opacity: 1; }
+
 .footer {
   background-color: #175E65;
   max-width: 1440px;
@@ -1154,10 +1164,10 @@ select, input, textarea {
     width: 100%; }
     @media (max-width: 1024px) {
       .header__logo-mob {
-        margin-top: 23px; } }
+        margin-top: 0; } }
     @media (max-width: 375px) {
       .header__logo-mob {
-        margin-bottom: 46px; } }
+        margin-bottom: 72px; } }
   .header__mob-ul {
     font-family: "Open Sans", sans-serif;
     font-size: 18px;
@@ -1211,7 +1221,7 @@ select, input, textarea {
   .socials__link {
     margin: 0 10px; }
   .socials-mob {
-    margin-top: 49px; }
+    margin-top: 75px; }
   .socials-mob__link {
     margin: 0 10px; }
     .socials-mob__link:first-child {
@@ -1332,8 +1342,6 @@ select, input, textarea {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border: 1px solid #CDCDCD; }
-  .header__form:hover:focus {
-    border: 1px solid #000; }
   @media (max-width: 768px) {
     .header__form {
       margin-top: 24px;
@@ -1352,7 +1360,7 @@ select, input, textarea {
     padding: 12px 16px;
     font-weight: normal;
     font-size: 18px;
-    color: #175E65; }
+    color: #E5E5E5; }
     .header__form-input:focus .header__form {
       border: 1px solid #000; }
     .header__form-input:focus {

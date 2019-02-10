@@ -44,8 +44,12 @@ function testimonialsSlider() {
         arrows: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        prevArrow: '<button type="button" class="slick-prev"><img src="../img/svg/arrow-prev.svg" alt="img"></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="../img/svg/arrow-next.svg" alt="img"></button>'
+        prevArrow: '<button type="button" class="slick-prev"><svg class="arow" width="29" height="50" viewBox="0 0 29 50" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+            '<path d="M28.8136 46.1335L7.68012 25L28.8136 3.86653L25 0L4.00543e-05 25L25 50L28.8136 46.1335Z" fill="#29C5D4"/>\n' +
+            '</svg></button>',
+        nextArrow: '<button type="button" class="slick-next"><svg class="arow" width="29" height="50" viewBox="0 0 29 50" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+            '<path d="M0 46.1335L21.1335 25L0 3.86653L3.81356 0L28.8136 25L3.81356 50L0 46.1335Z" fill="#29C5D4"/>\n' +
+            '</svg></button>'
     };
 
     var slider = $('.testimonials__items');
