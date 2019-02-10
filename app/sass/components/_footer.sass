@@ -78,26 +78,41 @@
   margin-bottom: 30px
   letter-spacing: 0
 
+  @include media(812)
+    margin-right: 0
+
   @include media(375)
     margin-top: 27px
-    margin-right: 0
     margin-bottom: 36px
 
 .btn-up
-  position: fixed
-  right: 87px
-  bottom: 78px
 
-  @include media(1024)
-    right: 20px
+  & svg
+    position: fixed
+    right: 87px
+    bottom: 78px
+    //
+    //&:hover
+    //  background: linear-gradient(90deg, #FF8A6F 0%, #E26447 100%)
 
-  @include media(375)
-    right: 2px
-    bottom: 226px
+    @include media(1024)
+      right: 20px
+
+    @include media(375)
+      right: 2px
+      bottom: 226px
+
+    &:hover
+
+      & ellipse
+          fill: url(#paint_linear)
+          transition: .3s
 
 .socials.footer-soc
   display: flex
 
+  @include media(812)
+    margin-right: 0
+
   @include media(375)
     margin-top: 24px
-    margin-right: 0

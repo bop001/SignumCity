@@ -315,6 +315,9 @@ select, input, textarea {
     margin-top: 107px; }
     @media (max-width: 1024px) {
       .easy-money__form {
+        margin-top: 84px; } }
+    @media (max-width: 768px) {
+      .easy-money__form {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -webkit-flex-direction: column;
@@ -530,6 +533,18 @@ select, input, textarea {
     .testimonials__h1 {
       margin: 31px auto 20px;
       font-size: 25px; } }
+  @media (max-width: 812px) {
+    .testimonials__h1 {
+      margin: 60px auto 20px; } }
+  @media (max-width: 768px) {
+    .testimonials__h1 {
+      margin: 133px auto 20px; } }
+  @media (max-width: 667px) {
+    .testimonials__h1 {
+      margin: 145px auto 20px; } }
+  @media (max-width: 375px) {
+    .testimonials__h1 {
+      margin: 30px auto 20px; } }
 
 .testimonials__title {
   font-family: "Open Sans", sans-serif;
@@ -650,12 +665,31 @@ select, input, textarea {
     bottom: -30px; }
     @media (max-width: 1024px) {
       .testimonials__item-text::after {
-        right: 633px;
-        bottom: 50px;
+        right: 568px;
+        bottom: 39px;
         -webkit-transform: rotate(180deg);
             -ms-transform: rotate(180deg);
                 transform: rotate(180deg);
         z-index: -1; } }
+    @media (max-width: 812px) {
+      .testimonials__item-text::after {
+        right: 574px;
+        bottom: 39px; } }
+    @media (max-width: 640px) {
+      .testimonials__item-text::after {
+        right: 1140px;
+        bottom: 27px; } }
+    @media (max-width: 375px) {
+      .testimonials__item-text::after {
+        right: 1311px;
+        bottom: 65px; } }
+    @media (max-width: 360px) {
+      .testimonials__item-text::after {
+        right: 1247px;
+        bottom: 47px; } }
+    @media (max-width: 320px) {
+      .testimonials__item-text::after {
+        right: 808px; } }
 
 .testimonials__text {
   margin-top: 86px;
@@ -723,6 +757,9 @@ select, input, textarea {
                 border-radius: 50%;
         margin: 6px;
         background: #F86544; } }
+  @media (max-width: 375px) {
+    .testimonials__items.slick-initialized.slick-slider.slick-dotted .slick-dots {
+      margin-left: 12px; } }
   .testimonials__items.slick-initialized.slick-slider.slick-dotted .slick-dots .slick-active button {
     opacity: 1; }
 
@@ -753,7 +790,10 @@ select, input, textarea {
     padding: 181px 0px 121px; }
     @media (max-width: 1024px) {
       .laptop__wrapper {
-        padding: 204px 0 52px; } }
+        padding: 203px 0 52px; } }
+    @media (max-width: 768px) {
+      .laptop__wrapper {
+        padding: 206px 0 52px; } }
     @media (max-width: 550px) {
       .laptop__wrapper {
         padding: 204px 0 26px; } }
@@ -1041,33 +1081,42 @@ select, input, textarea {
   font-size: 12px;
   margin-bottom: 30px;
   letter-spacing: 0; }
+  @media (max-width: 812px) {
+    .copyright {
+      margin-right: 0; } }
   @media (max-width: 375px) {
     .copyright {
       margin-top: 27px;
-      margin-right: 0;
       margin-bottom: 36px; } }
 
-.btn-up {
+.btn-up svg {
   position: fixed;
   right: 87px;
   bottom: 78px; }
   @media (max-width: 1024px) {
-    .btn-up {
+    .btn-up svg {
       right: 20px; } }
   @media (max-width: 375px) {
-    .btn-up {
+    .btn-up svg {
       right: 2px;
       bottom: 226px; } }
+  .btn-up svg:hover ellipse {
+    fill: url(#paint_linear);
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
 
 .socials.footer-soc {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
+  @media (max-width: 812px) {
+    .socials.footer-soc {
+      margin-right: 0; } }
   @media (max-width: 375px) {
     .socials.footer-soc {
-      margin-top: 24px;
-      margin-right: 0; } }
+      margin-top: 24px; } }
 
 .container {
   max-width: 1163px;
@@ -1113,7 +1162,6 @@ select, input, textarea {
     position: absolute;
     top: 0;
     left: 0;
-    max-height: 710px;
     height: 100vh;
     width: 100%;
     display: none;
@@ -1266,6 +1314,9 @@ select, input, textarea {
     @media (max-width: 375px) {
       .people__title-outer {
         margin-top: 32px; } }
+    @media (max-width: 320px) {
+      .people__title-outer {
+        margin-top: -3px; } }
   .people__h1 {
     font-family: Circe;
     font-size: 55px;

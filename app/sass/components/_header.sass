@@ -36,7 +36,6 @@
     position: absolute
     top: 0
     left: 0
-    max-height: 710px
     height: 100vh
     width: 100%
     display: none
@@ -178,6 +177,9 @@
 
     @include media(375)
       margin-top: 32px
+
+    @include media(320)
+      margin-top: -3px
 
   &__h1
     font-family: Circe
