@@ -36,7 +36,7 @@ header.header
             .header__mob
                 .header__logo-mob
                     a.header-mob__link(href='#')
-                        img(src='img/svg/logo.svg')
+                        img(src='img/svg/Logo.svg')
                     .header-mob__link_close
                         img(src='img/svg/Close.svg')
                 nav.header__mob-nav
@@ -65,14 +65,11 @@ header.header
                     | Win College Money
                 h2.people__h2   Win scholarship money or loan repayment Beginning May 2019, 100% Free - no catch
                 h3.people__h3  Education is expensive. We want to help. Join the wait list and get 10,000 virtual dollars in your trading account.
-                form.header__form
-                    input(type='hidden', name='project_name', value='SignumCitt')
-                    input(type='hidden', name='admin_email', value='sashaburlachenkon@gmail.com')
-                    input(type='hidden', name='form_subject', value='With header form')
-                    input.header__form-input(type='email' placeholder='Email')
+                form.header__form.form-send-people
+                    input.header__form-input(type='text' 'Email' name="email")
                     button.header__form-btn(type='submit')
                         | JOIN the Wait List
 
                 p.people__text We don’t spam you, but will alert you when starting awesome contests
-            .people__img
+            .people__img.wow.slideInRight(data-wow-duration="1s" data-wow-delay="0.2s")
                 img(src='img/svg/People-with-money.svg')

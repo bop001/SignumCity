@@ -34,45 +34,45 @@ append content
         .container
             .about__wrapper
                 .about__img
-                    img(src="img/svg/People-with-light.svg")
-                .about__outer
+                    img.wow.slideInLeft(src="img/svg/People-with-light.svg" data-wow-duration="1.5s" data-wow-delay="0" data-wow-offset="300")
+                .about__outer.wow.fadeIn(data-wow-duration="0.7s" data-wow-delay="0" data-wow-offset="300")
                     .about__title About us
                     p.about__text We're a bunch of fintech coders who think you should be able to play with fake money to win real money for college. And we figured out how to do that with sponsored contests.
                     p.about__text We aim to create the largest ongoing scholarship giveaway in history.
     section.easy-money
         .container
             .easy-money__wrapper
-                h1.easy-money__title Easy Money
+                h1.easy-money__title.wow.fadeIn(data-wow-duration="0.3s" data-wow-delay="0") Easy Money
                 .easy-money__item-outer
-                    .easy-money__item
+                    .easy-money__item.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.1s")
                         img(src='img/svg/Sing-up.svg')
                         .easy-money__item-title Sign Up
                         .easy-money__item-text Only your name, email and screen name, we never “Facebook” you
-                    .easy-money__item
+                    .easy-money__item.wow.fadeInUp(data-wow-duration="0.3s" data-wow-delay="0")
                         img(src='img/svg/Play.svg')
                         .easy-money__item-title Play
                         .easy-money__item-text Unleash your inner Warren Buffet playing our dynamic games
-                    .easy-money__item
+                    .easy-money__item.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.1s")
                         img(src='img/svg/Win.svg')
                         .easy-money__item-title Win
                         .easy-money__item-text Tell us where to send the “crap tons” of money if you wi
                 .easy-money__form
-                    h2.easy-money__form-h2 No boring scholarship essay!
+                    h2.easy-money__form-h2.wow.slideInLeft(data-wow-duration="1s" data-wow-delay="0") No boring scholarship essay!
                         br
                         | Play stock investing games to win!
-                    .easy__form-outer
-                        form.easy__form
-                            input.easy__form-input(type='email' placeholder='Email')
+                    .easy__form-outer.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0")
+                        form.easy__form.form-send-easy
+                            input.easy__form-input(type='text' placeholder='Email' name="email")
                             button.easy__form-btn(type='submit')
                                 | JOIN the Wait List
                         p.easy__form-text Hmm, still considering joining? We promise that we don’t bite, and we’ve had all our shots.
     section.testimonials
         .container
             .testimonials__wrapper
-                h1.testimonials__h1 Testimonials
-                .testimonials__title Don't believe us?
+                h1.testimonials__h1.wow.fadeIn(data-wow-duration="0.5s" data-wow-delay="0") Testimonials
+                .testimonials__title.wow.fadeIn(data-wow-duration="0.5s" data-wow-delay="0") Don't believe us?
                     span   Well listen to our beta testers:
-                .testimonials__items
+                .testimonials__items.wow.fadeInUp(data-wow-duration="0.5s" data-wow-delay="0")
                     each item in links
                         .testimonials__items-outer
                             .testimonials__item
@@ -81,24 +81,25 @@ append content
                                 .testimonials__item-texts
                                     .testimonials__item-title=item.name
                                     .testimonials__item-text=item.text
-                .testimonials__text Of course, none of these people actually said any of this, but we think they would. Signum City is all this, and more.
+                .testimonials__text.wow.fadeInUp(data-wow-duration="0.5s" data-wow-delay="0" data-wow-offset="490") Of course, none of these people actually said any of this, but we think they would. Signum City is all this, and more.
     section.laptop
         .container
             .laptop__wrapper
-                .laptop__texts
+                .laptop__texts.wow.slideInLeft(data-wow-duration="0.7s" data-wow-delay="0" data-wow-offset="490")
                     .laptop__texts-text Please don’t make us beg, although
                         span  we’re not beneath that.
                     .laptop__texts-text-second You know you want those $10,000 virtual dollars.
-                    form#laptop__form.laptop__form
-                        input.laptop__form-input(type='text', placeholder='Email', required='')
+                    form.laptop__form.form-send-laptop
+                        input.laptop__form-input(type='text' placeholder='Email' name="email")
                         button.laptop__form-btn
                             | JOIN the Wait List
+                .laptop__back.wow.slideInRight(data-wow-duration="0.7s" data-wow-delay="0" data-wow-offset="490")
+                    img(src="img/Saignum_laptop.png")
 
 
-    .popap
-        .congrats
-            .congrats__img
-                img(src="img/svg/Congrats.svg")
-            p.congrats__text Congrats!
-                span You are now оn the Wait List!
-            button  Hurray!
+    .congrats
+        .congrats__img
+            img(src="img/svg/Congrats.svg")
+        p.congrats__text Congrats!
+            span You are now оn the Wait List!
+        button#congrats-close  Hurray!

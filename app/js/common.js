@@ -4,9 +4,40 @@ $( document ).ready(function() {
     testimonialsSlider();
     mediaQueries();
     lazyScroll($('.socials'),700);
-    lazyScrollFade($('.btn-up'), 100);
+    lazyScrollFade($('.btn-up'), 500);
     fadeMenu();
+    new WOW().init();
 
+    var formSend = {
+        rules: {
+            email: {
+                required: true,
+                email: true
+            }
+        },
+        submitHandler: function(form) {
+            $.ajax({
+                type: "POST",
+                url: "../php/des-form.php",
+                data: $(form).serialize(),
+                success: function(){
+                    $.fancybox.open($('.congrats'));
+                },
+                error: function() {
+                    alert('Yops')
+                }
+            });
+        }
+    };
+
+    //validation($('.form-send-header'), formSend );
+    // validation($('.form-send-easy'), formSend );
+     validation($('.form-send-people'), formSend );
+
+
+    $('#congrats-close').on('click', function () {
+        $.fancybox.close($('.congrats'));
+    });
 
 });
 
@@ -107,3 +138,9 @@ function fadeMenu() {
         $('.header__wrapper-mob').fadeOut();
     });
 }
+function validation(form, props ){
+    form.validate(props);
+}
+
+
+

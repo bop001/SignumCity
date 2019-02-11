@@ -12,6 +12,15 @@
       min-height: auto
       max-height: 315px
 
+    @include media(640)
+      margin: 100px auto 235px
+
+    @include media(483)
+      margin: 100px auto 120px
+
+    @include media(411)
+      margin: 100px auto 16px
+
     @include media(375)
       margin: 7px auto 11px
 
@@ -38,7 +47,7 @@
   &__outer
     width: 50%
     margin-left: 152px
-    padding-top: 67px
+    padding-top: 39px
 
     @include media(1024)
       margin-left: 0
@@ -52,6 +61,7 @@
     color: #175E65
     text-transform: capitalize
     margin-bottom: 27px
+    font-weight: bold
 
     @include media(1024)
       font-size: 25px
@@ -98,7 +108,10 @@
     background-size: cover
 
   @include media(375)
-    background-position-y: -82px
+    background-position-y: 0
+
+  @include media(360)
+    background-position-y: -50px
 
   &__wrapper
     display: flex
@@ -189,8 +202,20 @@
       margin-top: 120px
       letter-spacing: 0.1px
 
-    //@include media(1024)
-    //  margin-top: 75px
+    @include media(640)
+      margin-top: 40px
+
+    @include media(568)
+      margin-top: 85px
+
+    @include media(411)
+      margin-top: 80px
+
+    @include media(375)
+      margin-top: 113px
+
+    @include media(360)
+      margin-top: 80px
 
   &__form-h2
     color: #fff
@@ -216,6 +241,7 @@
   border-radius: 60px
   justify-content: space-between
   border: 1px solid #CDCDCD
+  position: relative
 
   @include media(1024)
     background-color: transparent
@@ -234,6 +260,7 @@
     font-weight: normal
     font-size: 18px
     color: #E5E5E5
+    z-index: 10
 
     &:focus
       color: #16A6B3
@@ -262,6 +289,7 @@
     padding: 13px 0
     margin: -2px
     transition: .5s ease
+    z-index: 10
 
     &:hover
       background: linear-gradient(90deg, #FF8A6F 0%, #E26447 100%)
@@ -286,6 +314,18 @@
       font-size: 14px
       font-weight: 400
       margin-bottom: 138px
+
+    @include media(768)
+      margin-bottom: 50px
+
+    @include media(640)
+      margin-bottom: 55px
+
+    @include media(411)
+      margin-bottom: 60px
+
+    @include media(360)
+      margin-bottom: 96px
 
   &-outer
     margin-right: 64px
@@ -328,6 +368,9 @@
     @include media(1024)
       margin-top: -120px
 
+    @include media(823)
+      margin-top: -34px
+
   &__h1
     font-family: Circe
     font-size: 35px
@@ -344,10 +387,10 @@
       margin: 60px auto 20px
 
     @include media(768)
-      margin: 133px auto 20px
+      margin: 80px auto 20px
 
     @include media(667)
-      margin: 145px auto 20px
+      margin: 100px auto 20px
 
     @include media(375)
       margin: 30px auto 20px
@@ -459,6 +502,14 @@
         right: 1140px
         bottom: 27px
 
+      @include media(568)
+        right: 1548px
+        bottom: 27px
+
+      @include media(411)
+        right: 1445px
+        bottom: 55px
+
       @include media(375)
         right: 1311px
         bottom: 65px
@@ -487,6 +538,10 @@
       margin-bottom: 45px
       margin-right: 0
       width: 90%
+
+    @include media(640)
+      margin-bottom: 0
+
 
 .slick-prev.slick-arrow,
 .slick-next.slick-arrow
@@ -540,42 +595,87 @@
 
 .laptop
   background: url(../img/Background-footer.png) no-repeat
-  background-position: -76px -5px
   background-size: 100% cover
+  background-position: center bottom
+  position: relative
+
+  @include media(1366)
+    background-position: center -3px
+
+  @include media(1024)
+    background-position: -76px -5px
 
   @include media(768)
     flex-direction: column
     background-color: transparent
 
+  @include media(667)
+    background-position: center bottom
+
   @include media(375)
     background: url(../img/Background-footer-mob.png) no-repeat
     background-position: bottom
-    background-position-y: -3px
+
+  @include media(360)
+    background-position-y: 40px
 
   &__wrapper
     width: 100%
     display: flex
-    padding: 181px 0px 121px
+    padding: 181px 0px 88px
+
+    @include media(1366)
+      padding: 181px 0px 63px
 
     @include media(1024)
-      padding: 203px 0 52px
+      padding: 142px 0 0
 
-    @include media(768)
-      padding: 206px 0 52px
+    @include media(823)
+      padding: 84px 0 0px
+
+    @include media(640)
+      padding: 32px 0 52px
 
     @include media(550)
       padding: 204px 0 26px
+
+    @include media(483)
+      padding: 60px 0 26px
+
+    @include media(411)
+      padding: 75px 0 26px
 
     @include media(390)
       padding: 109px 0px 89px
 
     @include media(375)
-      padding: 82px 0 66px
+      padding: 130px 0 0px
+
+    @include media(360)
+      padding: 125px 0 0
+
+    @include media(320)
+      padding: 125px 0 0
 
   &__texts
     display: flex
     flex-direction: column
     width: 100%
+
+    @include media(1024)
+      margin-bottom: 62px
+
+    @include media(823)
+      padding-bottom: 118px
+
+    @include media(812)
+      padding-bottom: 56px
+
+    @include media(768)
+      padding-bottom: 56px
+
+    @include media(640)
+      padding-bottom: 0
 
   &__texts-text,
   &__texts-text-second
@@ -627,84 +727,70 @@
     @include media(768)
       width: 100%
 
-  &-btn
-    max-width: 240px
-    background: linear-gradient(90deg, #F86544 0%, #D83B17 100%)
-    border-radius: 60px
-    color: #fff
-    font-size: 18px
-    font-family: 'Open Sans', sans-serif
-    font-weight: bold
-    text-transform: uppercase
-    display: flex
-    width: 100%
-    justify-content: center
-    padding: 13px 0
-    left: 53%
-    margin: -2px
+  &__back
+    position: absolute
+    right: 290px
+    bottom: -68px
 
-    @include media(768)
-      max-width: 100%
-      margin-top: 10px
+    @include media(1366)
+      right: 172px
+
+    @include media(1024)
+      right: 32px
+
+    @include media(823)
+      display: none
 
 .laptop__form
 
   @include media(1024)
     background: none
 
-.popap
+.congrats
   display: none
-  background: rgba(0, 0, 0, .7)
-  height: 100vh
-  width: 100vw
-  overflow: hidden
-  position: fixed
-  top: 0px
-  z-index: 100
+  flex-direction: column
+  align-items: center
+  max-width: 600px
+  width: 100%
+  background: #fff
+  border-radius: 25px
 
-  & .congrats
+  &__img
+    max-width: 344px
+    margin: 34px auto 35px
+
+  &__text
+    font-family: Circe
+    line-height: 27px
+    font-size: 23px
+    color: #175E65
+    max-width: 288px
+    text-align: center
+    font-weight: bold
     display: flex
     flex-direction: column
-    align-items: center
-    max-width: 600px
-    max-height: 480px
-    margin: 137px auto
-    background: #fff
-    border-radius: 25px
+    margin: 0 auto 27px
 
-    &__img
-      max-width: 344px
-      margin: 34px auto 35px
-
-    &__text
-      font-family: Circe
-      line-height: 27px
-      font-size: 23px
-      color: #175E65
-      max-width: 288px
-      text-align: center
-      font-weight: bold
-      display: flex
-      flex-direction: column
-      margin-bottom: 27px
-
-    & button
-      font-family: 'Open Sans', sans-serif
-      color: #fff
-      font-size: 18px
-      font-weight: bold
-      text-transform: capitalize
-      background: linear-gradient(90deg, #F86544 0%, #D83B17 100%)
-      padding: 12px 0 13px
-      max-width: 200px
-      display: flex
-      justify-content: center
-      border-radius: 60px
-      width: 100%
-      margin-bottom: 70px
+  & button
+    font-family: 'Open Sans', sans-serif
+    color: #fff
+    font-size: 18px
+    font-weight: bold
+    text-transform: capitalize
+    background: linear-gradient(90deg, #F86544 0%, #D83B17 100%)
+    padding: 12px 0 13px
+    max-width: 200px
+    display: flex
+    justify-content: center
+    border-radius: 60px
+    width: 100%
+    margin: 0 auto
 
   &.show
     display: block
+
+.fancybox-button
+  display: none!important
 
 .arow
   opacity: 0.2
@@ -716,4 +802,9 @@
   &:active
     opacity: 1
 
+label.error
+  position: absolute
+  top: -25px
+  left: 13px
+  color: red
 

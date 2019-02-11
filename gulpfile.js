@@ -50,7 +50,8 @@ gulp.task('css-libs', function(){
     'node_modules/jquery-form-styler/dist/jquery.formstyler.css',
     'node_modules/responsive-tabs/css/jquery.responsive-tabs.css',
     'app/vendor/css/preloader.css',
-    'node_modules/slick-carousel/slick/slick.css'
+    'node_modules/slick-carousel/slick/slick.css',
+    'node_modules/wow.js/css/libs/animate.css'
   ])
     .pipe(concat('libs.min.css'))
     .pipe(cssnano())
@@ -67,7 +68,9 @@ gulp.task('scripts', function(){
       'node_modules/nouislider/distribute/nouislider.js',
       'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
       "node_modules/responsive-tabs/js/jquery.responsiveTabs.js",
-      'node_modules/slick-carousel/slick/slick.js'
+      'node_modules/slick-carousel/slick/slick.js',
+      'node_modules/wow.js/dist/wow.js',
+      'node_modules/jquery-validation/dist/jquery.validate.js'
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

@@ -8,7 +8,6 @@
     padding: 0 18px
 
 .header
-  max-width: 1440px
   margin: 0 auto
   min-height: 743px
   background: url(../img/Background-header.png) no-repeat
@@ -17,6 +16,9 @@
   @include media(375)
     background: url(../img/Background-header-mob.png) no-repeat
     background-position-y: -70px
+
+  @include media(320)
+    background-position-y: -40px
 
   &__menu
     display: none
@@ -31,6 +33,9 @@
 
     @include media(375)
       margin-top: 13px
+
+    @include media(320)
+      margin-top: 30px
 
   &__wrapper-mob
     position: absolute
@@ -78,9 +83,10 @@
     width: 100%
 
     @include media(1024)
-      margin-top: 0
+      margin-top: 17px
 
     @include media(375)
+      margin-top: 0
       margin-bottom: 72px
 
   &__mob-ul
@@ -121,6 +127,15 @@
     & img
       width: 100%
       margin-top: -5px
+
+      @include media(1024)
+        margin-top: 0px
+
+      @include media(320)
+        margin-top: -2px
+
+    @include media(411)
+      margin-top: 0
 
     @include media(375)
       display: flex
@@ -188,7 +203,7 @@
     color: #fff
     max-width: 621px
 
-    @include media(375)
+    @include media(483)
       font-size: 35px
       line-height: normal
 
@@ -235,8 +250,8 @@
       letter-spacing: -1px
 
   &__img
-    margin-top: -14px
-    margin-right: -95px
+    margin-top: -4px
+    margin-right: -91px
 
     @include media(1220)
       display: none
@@ -252,9 +267,7 @@
   border-radius: 60px
   justify-content: space-between
   border: 1px solid #CDCDCD
-
-  //&:has( > &-input:focus)
-  //  border: 1px solid #000
+  position: relative
 
   @include media(768)
     margin-top: 24px
