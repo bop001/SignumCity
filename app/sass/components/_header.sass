@@ -45,6 +45,7 @@
     width: 100%
     display: none
     background: url(../img/Background-header.png) no-repeat
+    z-index: 11
 
 
     @include media(375)
@@ -182,8 +183,11 @@
   margin-top: 75px
   width: 100%
 
-  @include media(1220)
-    margin: 0 auto
+  @include media(1024)
+    margin-top: 10px
+
+  //@include media(1220)
+  //  margin: 0 auto
 
   &__title-outer
     display: flex
@@ -253,7 +257,14 @@
     margin-top: -4px
     margin-right: -91px
 
-    @include media(1220)
+    @include media(1280)
+      margin-right: 0
+
+    @include media(1024)
+      width: 74%
+      margin-right: -250px
+
+    @include media(768)
       display: none
 
 

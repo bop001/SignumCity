@@ -6,6 +6,8 @@ $( document ).ready(function() {
     lazyScroll($('.socials'),700);
     lazyScrollFade($('.btn-up'), 500);
     fadeMenu();
+    lazyScrollSection($('.header__link'), 500);
+    lazyScrollSection($('.footer__link'), 500);
     new WOW().init();
 
     var formSend = {
@@ -30,8 +32,8 @@ $( document ).ready(function() {
         }
     };
 
-    //validation($('.form-send-header'), formSend );
-    // validation($('.form-send-easy'), formSend );
+     validation($('.form-send-laptop'), formSend );
+     validation($('.form-send-easy'), formSend );
      validation($('.form-send-people'), formSend );
 
 
@@ -140,6 +142,13 @@ function fadeMenu() {
 }
 function validation(form, props ){
     form.validate(props);
+}
+function lazyScrollSection(anchor, speed) {
+    anchor.on('click', function(e) {
+        e.preventDefault();
+        var href = $(this).attr("href");
+        $("html, body").animate({scrollTop:$(href).offset().top}, speed);
+    });
 }
 
 

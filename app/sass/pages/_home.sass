@@ -5,10 +5,11 @@
 
     @include media(1024)
       margin-top: 96px
+      margin-left: 0
 
     @include media(768)
-      width: 94%
-      margin: 100px auto 385px
+      width: 74%
+      margin: 100px auto 139px
       min-height: auto
       max-height: 315px
 
@@ -27,7 +28,7 @@
     img
 
       @include media(1024)
-        width: 100%
+        width: 80%
 
 
   &__wrapper
@@ -260,7 +261,6 @@
     font-weight: normal
     font-size: 18px
     color: #E5E5E5
-    z-index: 10
 
     &:focus
       color: #16A6B3
@@ -289,7 +289,6 @@
     padding: 13px 0
     margin: -2px
     transition: .5s ease
-    z-index: 10
 
     &:hover
       background: linear-gradient(90deg, #FF8A6F 0%, #E26447 100%)
@@ -661,9 +660,10 @@
     display: flex
     flex-direction: column
     width: 100%
+    z-index: 10
 
     @include media(1024)
-      margin-bottom: 62px
+      margin-bottom: 58px
 
     @include media(823)
       padding-bottom: 118px
@@ -731,6 +731,7 @@
     position: absolute
     right: 290px
     bottom: -68px
+    z-index: 9
 
     @include media(1366)
       right: 172px
@@ -785,6 +786,10 @@
     border-radius: 60px
     width: 100%
     margin: 0 auto
+    transition: background .3s
+
+    &:hover
+      background: linear-gradient(90deg, #FF8A6F 0%, #E26447 100%)
 
   &.show
     display: block
