@@ -7,6 +7,7 @@ $( document ).ready(function() {
     lazyScrollFade($('.btn-up'), 500);
     fadeMenu();
     lazyScrollSection($('.header__link'), 500);
+    lazyScrollSection($('.header__mob-link'), 500);
     lazyScrollSection($('.footer__link'), 500);
     new WOW().init();
 
@@ -24,6 +25,7 @@ $( document ).ready(function() {
                 data: $(form).serialize(),
                 success: function(){
                     $.fancybox.open($('.congrats'));
+                    $('form').find('input').val('');
                 },
                 error: function() {
                     alert('Yops')
@@ -41,6 +43,24 @@ $( document ).ready(function() {
         $.fancybox.close($('.congrats'));
     });
 
+    jQuery('#aboutLink').on('click', function scrollToAnchor(e) {
+        const anchor = jQuery(this);
+        const href = anchor.attr('href');
+        jQuery('html, body').stop().animate({
+            scrollTop: jQuery(href).offset().top - 150,
+        }, 500);
+
+        e.preventDefault();
+    });
+    jQuery('#aboutLinkMob').on('click', function scrollToAnchor(e) {
+        const anchor = jQuery(this);
+        const href = anchor.attr('href');
+        jQuery('html, body').stop().animate({
+            scrollTop: jQuery(href).offset().top - 150,
+        }, 500);
+
+        e.preventDefault();
+    });
 });
 
 

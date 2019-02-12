@@ -3,32 +3,32 @@
   &__img
     margin-left: -44px
 
+    @include media(1280)
+      margin-left: 0
+
     @include media(1024)
       margin-top: 96px
       margin-left: 0
 
     @include media(768)
-      width: 74%
-      margin: 100px auto 139px
+      margin: 100px auto 75px
       min-height: auto
-      max-height: 315px
 
     @include media(640)
       margin: 100px auto 235px
 
     @include media(483)
-      margin: 100px auto 120px
+      margin: 100px auto 0
 
     @include media(411)
       margin: 100px auto 16px
 
     @include media(375)
-      margin: 7px auto 11px
+      width: 94%
+      margin: 0 auto
 
     img
-
-      @include media(1024)
-        width: 80%
+      width: 100%
 
 
   &__wrapper
@@ -43,7 +43,7 @@
       flex-direction: column
       flex-wrap: wrap
       justify-content: center
-      margin-top: -74px
+      margin: -74px auto 57px
 
   &__outer
     width: 50%
@@ -54,6 +54,9 @@
       margin-left: 0
       width: 100%
       padding-top: 5px
+
+    @include media(1024)
+      padding-top: 25px
 
   &__title
     font-family: Circe
@@ -178,6 +181,9 @@
     font-size: 18px
     letter-spacing: 0
 
+    @include media(1100)
+      margin: 5px -30px
+
     @include media(1024)
       max-width: 320px
       margin: 0 auto
@@ -232,7 +238,8 @@
 
 
 .easy__form,
-.laptop__form
+.laptop__form,
+.header__form
   display: flex
   flex-wrap: wrap
   align-items: center
@@ -283,12 +290,11 @@
     font-family: 'Open Sans', sans-serif
     font-weight: bold
     text-transform: uppercase
-    display: flex
     width: 100%
-    justify-content: center
     padding: 13px 0
     margin: -2px
     transition: .5s ease
+    text-align: center
 
     &:hover
       background: linear-gradient(90deg, #FF8A6F 0%, #E26447 100%)
@@ -561,6 +567,9 @@
   left: 39px
   z-index: 100
 
+  @include media(1180)
+    left: 70px
+
 .testimonials__items.slick-initialized.slick-slider.slick-dotted
 
   & .slick-dots
@@ -605,18 +614,10 @@
     background-position: -76px -5px
 
   @include media(768)
-    flex-direction: column
-    background-color: transparent
-
-  @include media(667)
-    background-position: center bottom
-
-  @include media(375)
     background: url(../img/Background-footer-mob.png) no-repeat
     background-position: bottom
-
-  @include media(360)
-    background-position-y: 40px
+    flex-direction: column
+    background-color: transparent
 
   &__wrapper
     width: 100%
@@ -629,33 +630,6 @@
     @include media(1024)
       padding: 142px 0 0
 
-    @include media(823)
-      padding: 84px 0 0px
-
-    @include media(640)
-      padding: 32px 0 52px
-
-    @include media(550)
-      padding: 204px 0 26px
-
-    @include media(483)
-      padding: 60px 0 26px
-
-    @include media(411)
-      padding: 75px 0 26px
-
-    @include media(390)
-      padding: 109px 0px 89px
-
-    @include media(375)
-      padding: 130px 0 0px
-
-    @include media(360)
-      padding: 125px 0 0
-
-    @include media(320)
-      padding: 125px 0 0
-
   &__texts
     display: flex
     flex-direction: column
@@ -666,16 +640,16 @@
       margin-bottom: 58px
 
     @include media(823)
-      padding-bottom: 118px
-
-    @include media(812)
-      padding-bottom: 56px
-
-    @include media(768)
-      padding-bottom: 56px
-
-    @include media(640)
       padding-bottom: 0
+
+    //@include media(812)
+    //  padding-bottom: 56px
+    //
+    //@include media(768)
+    //  padding-bottom: 56px
+    //
+    //@include media(640)
+    //  padding-bottom: 0
 
   &__texts-text,
   &__texts-text-second
