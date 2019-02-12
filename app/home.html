@@ -90,13 +90,23 @@
                 <h1 class="people__h1">Play the Virtual<br>Stock Market<br>Win College Money</h1>
                 <h2 class="people__h2">  Win scholarship money or loan repayment Beginning May 2019, 100% Free - no catch</h2>
                 <h3 class="people__h3"> Education is expensive. We want to help. Join the wait list and get 10,000 virtual dollars in your trading account.</h3>
-                <form class="header__form form-send-people">
-                  <input class="header__form-input" autocomplete="off" type="text" placeholder="Email" name="email">
-                  <button class="header__form-btn" type="submit">JOIN the Wait List</button>
+                <!--form.header__form.form-send-people-->
+                <!--    input.header__form-input(autocomplete="off" type='text' placeholder='Email' name="email")-->
+                <!--    button.header__form-btn(type='submit')-->
+                <!--        | JOIN the Wait List-->
+                <form class="validate header__form form-send-people" id="mc-embedded-subscribe-form" action="https://kapitall.us19.list-manage.com/subscribe/post?u=4bb9eac2b99ca9377f4d20ddc&amp;id=16152fceac" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="">
+                  <input class="email header__form-input" id="mce-EMAIL" type="email" value="" name="EMAIL" placeholder="Email" required="">
+                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                    <input type="text" name="b_4bb9eac2b99ca9377f4d20ddc_16152fceac" tabindex="-1" value="">
+                  </div>
+                  <div class="clear header__form-btn">
+                    <input id="mc-embedded-subscribe" type="submit" value="JOIN the Wait List" name="subscribe">
+                  </div>
                 </form>
                 <p class="people__text">We don’t spam you, but will alert you when starting awesome contests</p>
               </div>
-              <div class="people__img wow slideInRight" data-wow-duration="1s" data-wow-delay="0.2s"><img src="img/svg/People-with-money.svg"></div>
+              <div class="people__img wow slideInRight" data-wow-duration="1s" data-wow-delay="0.2s"></div><img src="img/svg/People-with-money.svg">
             </div>
           </div>
         </header>

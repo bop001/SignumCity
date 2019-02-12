@@ -285,16 +285,21 @@
     max-width: 240px
     background: linear-gradient(90deg, #F86544 0%, #D83B17 100%)
     border-radius: 60px
-    color: #fff
-    font-size: 18px
-    font-family: 'Open Sans', sans-serif
-    font-weight: bold
     text-transform: uppercase
     width: 100%
-    padding: 13px 0
     margin: -2px
     transition: .5s ease
     text-align: center
+    cursor: pointer
+
+    & input
+      color: #fff
+      font-size: 18px
+      font-family: 'Open Sans', sans-serif
+      font-weight: bold
+      padding: 13px 0
+      text-transform: uppercase
+      cursor: pointer
 
     &:hover
       background: linear-gradient(90deg, #FF8A6F 0%, #E26447 100%)
@@ -304,6 +309,7 @@
       position: relative
       left: 0
       margin-top: 10px
+
 
   &-text
     color: #fff
@@ -642,15 +648,6 @@
     @include media(823)
       padding-bottom: 0
 
-    //@include media(812)
-    //  padding-bottom: 56px
-    //
-    //@include media(768)
-    //  padding-bottom: 56px
-    //
-    //@include media(640)
-    //  padding-bottom: 0
-
   &__texts-text,
   &__texts-text-second
     color: #fff
@@ -787,3 +784,5 @@ label.error
   left: 13px
   color: red
 
+.header__form
+  margin-top: 34px

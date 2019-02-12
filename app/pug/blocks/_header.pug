@@ -65,10 +65,17 @@ header.header#header
                     | Win College Money
                 h2.people__h2   Win scholarship money or loan repayment Beginning May 2019, 100% Free - no catch
                 h3.people__h3  Education is expensive. We want to help. Join the wait list and get 10,000 virtual dollars in your trading account.
-                form.header__form.form-send-people
-                    input.header__form-input(autocomplete="off" type='text' placeholder='Email' name="email")
-                    button.header__form-btn(type='submit')
-                        | JOIN the Wait List
+                //form.header__form.form-send-people
+                //    input.header__form-input(autocomplete="off" type='text' placeholder='Email' name="email")
+                //    button.header__form-btn(type='submit')
+                //        | JOIN the Wait List
+                form#mc-embedded-subscribe-form.validate.header__form.form-send-people(action='https://kapitall.us19.list-manage.com/subscribe/post?u=4bb9eac2b99ca9377f4d20ddc&id=16152fceac', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+                    input#mce-EMAIL.email.header__form-input(type='email', value='', name='EMAIL', placeholder='Email', required='')
+                    // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+                    div(style='position: absolute; left: -5000px;', aria-hidden='true')
+                        input(type='text', name='b_4bb9eac2b99ca9377f4d20ddc_16152fceac', tabindex='-1', value='')
+                    .clear.header__form-btn
+                        input#mc-embedded-subscribe(type='submit', value='JOIN the Wait List', name='subscribe')
                 p.people__text We don’t spam you, but will alert you when starting awesome contests
             .people__img.wow.slideInRight(data-wow-duration="1s" data-wow-delay="0.2s")
-                img(src='img/svg/People-with-money.svg')
+            img(src='img/svg/People-with-money.svg')

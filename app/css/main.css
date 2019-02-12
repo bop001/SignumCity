@@ -469,18 +469,24 @@ select, input, textarea {
     background: linear-gradient(90deg, #F86544 0%, #D83B17 100%);
     -webkit-border-radius: 60px;
             border-radius: 60px;
-    color: #fff;
-    font-size: 18px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
     text-transform: uppercase;
     width: 100%;
-    padding: 13px 0;
     margin: -2px;
     -webkit-transition: .5s ease;
     -o-transition: .5s ease;
     transition: .5s ease;
-    text-align: center; }
+    text-align: center;
+    cursor: pointer; }
+    .easy__form-btn input,
+    .laptop__form-btn input,
+    .header__form-btn input {
+      color: #fff;
+      font-size: 18px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: bold;
+      padding: 13px 0;
+      text-transform: uppercase;
+      cursor: pointer; }
     .easy__form-btn:hover,
     .laptop__form-btn:hover,
     .header__form-btn:hover {
@@ -1065,6 +1071,9 @@ label.error {
   top: -25px;
   left: 13px;
   color: red; }
+
+.header__form {
+  margin-top: 34px; }
 
 .footer {
   background-color: #175E65;
