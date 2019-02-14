@@ -18,12 +18,25 @@ $( document ).ready(function() {
                 email: true
             }
         },
-        submitHandler: function(form) {
+        submitHandler: function(form, e) {
+            e.preventDefault();
+            console.log(form);
             $.ajax({
-                type: "POST",
-                url: "../php/des-form.php",
+                type: $(form).attr('method'),
+                url: $(form).attr('action'),
                 data: $(form).serialize(),
-                success: function(){
+                cache: false,
+                dataType: 'json',
+                contentType: 'application/json; charset=utf-8',
+                error: function (err) { alert('Could not connect to the registration server. Please try again later.') },
+                success: function(data){
+                    $('.congrats').find('.congrats__text').remove();
+                    if (data.result === 'success') {
+                        $('.congrats__img').after(('<p class="congrats__text">Congrats! <br> You are now on the Wait List!</p>'));
+                        $('form').find('input').val('');
+                    } else {
+                        $('.congrats__img').after(('<p class="congrats__text">' + data.msg + '</p>'));
+                    }
                     $.fancybox.open($('.congrats'));
                     $('form').find('input').val('');
                 },
@@ -34,9 +47,9 @@ $( document ).ready(function() {
         }
     };
 
-     validation($('.form-send-laptop'), formSend );
-     validation($('.form-send-easy'), formSend );
-     validation($('.form-send-people'), formSend );
+     validation($('#header-form'), formSend );
+     validation($('#easy-form'), formSend );
+     validation($('#laptop-form'), formSend );
 
 
     $('#congrats-close').on('click', function () {

@@ -56,9 +56,10 @@ append content
                         br
                         | Play stock investing games to win!
                     .easy__form-outer.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0")
-                        form.easy__form.form-send-easy
-                            input.easy__form-input(type='text' placeholder='Email' name="email")
-                            button.easy__form-btn(type='submit')
+                        form#easy-form.easy__form.form-send-easy(action="https://signumcity.us20.list-manage.com/subscribe/post-json?u=3d4a8a81e30027c8cb0afcd89&id=eac01bd1ed&c=?", method='post')
+                            input.easy__form-input(autocomplete="off" type='email', value='', name='EMAIL', placeholder='Email', required='')
+                            input(type='text', name='b_3d4a8a81e30027c8cb0afcd89_eac01bd1ed', tabindex='-1', value='' hidden)
+                            button.easy__form-btn(type='submit', name='subscribe')
                                 | JOIN the Wait List
                         p.easy__form-text Hmm, still considering joining? We promise that we don’t bite, and we’ve had all our shots.
     section.testimonials#testimonials
@@ -84,9 +85,10 @@ append content
                     .laptop__texts-text Please don’t make us beg, although
                         span  we’re not beneath that.
                     .laptop__texts-text-second You know you want those $10,000 virtual dollars.
-                    form.laptop__form.form-send-laptop
-                        input.laptop__form-input(type='text' placeholder='Email' name="email")
-                        button.laptop__form-btn
+                    form#laptop-form.laptop__form.form-send-laptop(action="https://signumcity.us20.list-manage.com/subscribe/post-json?u=3d4a8a81e30027c8cb0afcd89&id=eac01bd1ed&c=?", method='post')
+                        input.laptop__form-input(autocomplete="off" type='email', value='', name='EMAIL', placeholder='Email', required='')
+                        input(type='text', name='b_3d4a8a81e30027c8cb0afcd89_eac01bd1ed', tabindex='-1', value='' hidden)
+                        button.laptop__form-btn(type='submit', name='subscribe')
                             | JOIN the Wait List
                 .laptop__back.wow.slideInRight(data-wow-duration="0.7s" data-wow-delay="0")
                     img(src="img/Saignum_laptop.png")
@@ -95,6 +97,4 @@ append content
     .congrats
         .congrats__img
             img(src="img/svg/Congrats.svg")
-        p.congrats__text Congrats!
-            span You are now оn the Wait List!
         button#congrats-close  Hurray!

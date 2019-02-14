@@ -476,17 +476,14 @@ select, input, textarea {
     -o-transition: .5s ease;
     transition: .5s ease;
     text-align: center;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    padding: 13px 0;
+    text-transform: uppercase;
     cursor: pointer; }
-    .easy__form-btn input,
-    .laptop__form-btn input,
-    .header__form-btn input {
-      color: #fff;
-      font-size: 18px;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: bold;
-      padding: 13px 0;
-      text-transform: uppercase;
-      cursor: pointer; }
     .easy__form-btn:hover,
     .laptop__form-btn:hover,
     .header__form-btn:hover {
